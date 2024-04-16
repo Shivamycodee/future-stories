@@ -17,7 +17,7 @@ function JudgementAI() {
         <h4 style={{ textAlign: "center" }}>
           <span style={{ fontFamily: "verdana, geneva, sans-serif" }}>
             {" "}
-            10th January 2024
+            16th April 2024
           </span>
         </h4>
 
