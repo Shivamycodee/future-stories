@@ -34,7 +34,7 @@ export const Articles = () => {
                 <p>Now AI will announce the JUDGEMENT</p>
 
                 <div style={{ marginTop: "30px" }}>
-                  <span>EIP</span>
+                  <span>BUILD-1</span>
                 </div>
               </div>
 

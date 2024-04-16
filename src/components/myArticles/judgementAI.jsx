@@ -155,7 +155,6 @@ function JudgementAI() {
               target="_blank"
               rel="noopener"
             >
-              {" "}
               India has 21 judges per million population
             </a>
             , which is significantly lower than countries like the United States
@@ -338,9 +337,24 @@ function JudgementAI() {
               <br />
             </p>
 
-            <strong >
-             That's all for now, I hope you like the idea of Judgment AI.
-             build-2 will be coming soon... 🤘
+            <strong>
+              If you are interested in this idea, hit me up at
+              twitter/linkedin/telegram , links are in{" "}
+              <a
+                href="https://shivamyadav.codes/about"
+                style={{ color: "lightblue" }}
+              >
+                About Me
+              </a>{" "}
+              Section.
+            </strong>
+            <br />
+            <br />
+            <br />
+
+            <strong>
+              That's all for now, I hope you like the idea of Judgment AI.
+              build-2 will be coming soon... 🤘
             </strong>
           </>
         </>
