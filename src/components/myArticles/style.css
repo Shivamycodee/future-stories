@@ -1,0 +1,12 @@
+
+.article-holder{
+   margin-inline: 20%;
+   text-align: justify;
+   /* min-height: 120vh; */
+   font-size: 1.13rem;
+   padding-bottom: 5%;
+}
+
+.article-holder td{
+    border: 1px solid var(--secondary-color);
+}
