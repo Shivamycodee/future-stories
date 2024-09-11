@@ -6,7 +6,7 @@ import ThirdConf from '../myArticles/articles/third-conf.png'
 import FourConf from '../myArticles/articles/four-conf.png'
 import FiveConf from '../myArticles/articles/five-conf.png'
 import SixConf from '../myArticles/articles/six-conf.png'
-
+import Chart from '../myArticles/articles/chart.png'
 
 function Confession() {
 
@@ -76,15 +76,11 @@ But what if the hacker uses a valid JWT and an old encrypted payload that has be
 </li>
 </ol>
 
-<p>&nbsp;</p>
-<p>This way, confession package handles and prevent your server from Hacker</p>
+<h2 style={{marginTop:50,marginBottom:50}} >Here is a simple chart to explain how my package handles request...</h2>
+
+<img src={Chart} alt="" width="100%" height="800" />
 
 <p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-
 
 <p>If you find any problem/issue in my package, please create an <a href="https://github.com/Shivamycodee/confession/issues/new" target="_blank" >issue thread here.</a></p>
 
