@@ -30,3 +30,16 @@
     font-size: 1.13rem;
     padding-bottom: 5%;
  }
+
+.article-holder a{
+     color:lightblue;
+}
+
+.article-holder img{
+    margin-top: 2.7rem;
+    margin-bottom: 3rem;
+}
+
+ol li {
+    margin-bottom: 10px; /* Adjust the value as needed */
+}
