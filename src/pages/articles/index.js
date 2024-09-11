@@ -5,6 +5,25 @@ import { Container, Row, Col } from "react-bootstrap";
 import { meta } from "../../content_option";
 
 import AI from '../../components/myArticles/articles/3.png';
+import NETWORK from '../../components/myArticles/articles/5.png';
+
+const ARTICLES_METADATA = [
+  {
+    title: "Judgement AI (build-1)",
+    description: "Now AI will announce the JUDGEMENT",
+    link: "/articles/judgementAI",
+    img: AI,
+    btnTxt:'BUILD-1'
+  },
+  {
+    title: "Confession",
+    description: "Now your calls are truely secure.",
+    link: "/articles/confession",
+    img: NETWORK,
+    btnTxt:'NPM'
+  }
+];
+
 
 export const Articles = () => {
   return (
@@ -23,24 +42,32 @@ export const Articles = () => {
           </Col>
         </Row>
 
-        <div className="mb-5 po_items_ho">
+        <div className="article-holder-outer" >
           {/* 1st article */}
 
-          <a href="/articles/judgementAI" rel="noopener noreferrer">
-            <div className="po_item_article">
-              <img src={AI} alt="err" />
-
-              <div className="content">
-                <p>Now AI will announce the JUDGEMENT</p>
-
-                <div style={{ marginTop: "30px" }}>
-                  <span>BUILD-1</span>
+          {
+            ARTICLES_METADATA.map((data, i) => {
+              return (
+                <a href={data.link} rel="noopener noreferrer">
+                <div className="po_item_article">
+                  <img src={data.img} alt="err" />
+    
+                  <div className="content">
+                    <p>{data.description}</p>
+    
+                    <div>
+                      <span>{data.btnTxt}</span>
+                    </div>
+                  </div>
+    
+                  <p className="article-title">{data.title}</p>
                 </div>
-              </div>
+              </a>
+              )})
+          }
 
-              <p className="article-title">Judgement AI (build-1)</p>
-            </div>
-          </a>
+
+
         </div>
       </Container>
     </HelmetProvider>

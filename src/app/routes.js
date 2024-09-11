@@ -11,6 +11,7 @@ import { CSSTransition, TransitionGroup } from "react-transition-group";
 import ArticlesEditor from "../components/myArticles/ArticlesEditor";
 
 import JudgementAI from "../components/myArticles/judgementAI";
+import Confession from '../components/myArticles/Confession';
 
 const AnimatedRoutes = withRouter(({ location }) => (
   <TransitionGroup>
@@ -31,6 +32,7 @@ const AnimatedRoutes = withRouter(({ location }) => (
         <Route path="/adminArticleEditor" element={<ArticlesEditor />} />
 
         <Route path="/articles/judgementAI" element={<JudgementAI />} />
+        <Route path="/articles/confession" element={<Confession />} />
         <Route path="*" element={<Home />} />
       </Routes>
     </CSSTransition>

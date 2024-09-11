@@ -57,6 +57,12 @@ const dataProjects = [
     link: "https://a-polls.vercel.app/",
     githubLink: "https://github.com/Shivamycodee/APolls",
   },
+  {
+    img: "/projects/6.gif", // apolls
+    description: "A package for a secure commuite to your server from browser.",
+    link: "https://www.npmjs.com/package/@shivamycodee/confession",
+    githubLink: "https://github.com/Shivamycodee/confession",
+  }
 ];
 
 const dataArticles = [
