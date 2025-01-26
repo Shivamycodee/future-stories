@@ -47,7 +47,7 @@ Now you might say, 'But what if I keep the expiration time of my JWT very short,
 </li>
 </ol>
 
-<p>My package, <a href='https://www.npmjs.com/package/@shivamycodee/confession' target='_blank'>@shivamycodee/confession</a>, resolves this issue. It uses <a href='https://bun.sh' target='_blank'>Bun</a> to make it optimized and fast.</p>
+<p>My package, <a href='https://www.npmjs.com/package/@shivamycodee/confession' target='_blank'>@shivamycodee/confession</a>, resolves this issue. It uses <a href='https://bun.sh' target='_blank'>Bun</a> to make it optimized and fast, <a href="https://x.com/VibeWeb3/status/1827307028894945572"  target="_blank" >checkout this tweet </a> to get a simple comparison </p>
 
 <h2 style={{marginTop:50,marginBottom:50}} >How package handles this issue?</h2>
 
