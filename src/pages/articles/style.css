@@ -1,88 +1,107 @@
-.po_item_articles_ho {
-    column-width: 15em;
-    -moz-column-width: 15em;
-    -webkit-column-width: 15em;
-    column-gap: 4rem;
-    -moz-column-gap: 4rem;
-    -webkit-column-gap: 4rem;
+.articles-container {
+    max-width: 1200px;
+    margin: auto;
 }
 
-.po_item_article {
-    display: inline-block;
+/* Grid layout for articles */
+.articles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+}
+
+/* Article Card */
+.article-card {
     position: relative;
     background: var(--secondary-color);
-    transition: 0.3s ease;
-    cursor: pointer;
-    border-top-left-radius:10px;
-    border-top-right-radius:10px;
-}
-
-.po_item_article img {
-    max-width: 100%;
-    border-top-left-radius:10px;
-    border-top-right-radius:10px;
-}
-
-.po_item_article .content {
-    position: absolute;
-    height: 0;
-    width: 0;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: var(--overlay-color);
-    z-index: 1;
+    transition: transform 0.3s ease;
+    text-align: center;
+    overflow: hidden;
+    border-radius: 10px;
     display: flex;
-    justify-content: center;
     flex-direction: column;
-    align-items: center;
-    height: 100%;
+    cursor: pointer;
+    text-decoration: none;
+    /* Removed fixed sizing to let grid layout work naturally */
+}
+
+.article-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Image Placeholder (Skeleton Loader) */
+.image-placeholder {
     width: 100%;
-    opacity: 0;
-    padding: 7px;
-    transition-delay: 1s;
-    transition: 0.3s ease;
-    font-size: 20px;
+    height: 180px;
+    background: rgba(0, 0, 0, 0.1);
     border-radius: 10px;
 }
 
-.po_item_article:hover {
-    box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.25);
+/* Article Image */
+.article-image {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 10px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
 }
 
-.po_item_article:hover .content {
-    height: calc(100% - 30px);
-    width: calc(100% - 30px);
+.article-image.loaded {
     opacity: 1;
 }
 
-.po_item_article:hover .content {
-    opacity: 1;
-    color: var(--secondary-color);
+/* Content */
+.article-card .content {
+    padding: 15px;
+    font-size: 16px;
+    color: var(--text-color);
 }
 
-
-.po_item_article .content span {
+.article-card .content span {
     background: var(--bg-color);
-    font-size: 1rem;
-    padding: 4px 8px;
-    text-align: center;
-    font-family: source-code-pro,Menlo,Monaco,Consolas,Courier New,monospace;
-    text-decoration: none;
-    text-transform: capitalize;
-    border: 1px solid var(--secondary-color);
+    font-size: 14px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    display: inline-block;
 }
 
-.po_item_article .content a:hover {
-    text-decoration: none;
-}
-
-
-.article-title{
-    text-align: center;
-    font-size: 1.3rem;
-    font-weight: 800;
-    padding: 10px 0;
-    margin: 0;
+.article-title {
+    font-size: 18px;
+    font-weight: bold;
     color: var(--bg-color);
+    padding: 10px;
+}
+
+/* Laptop View: Better sizing for larger screens */
+@media (min-width: 769px) {
+    .articles-grid {
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    }
+    .article-card {
+         max-width: 350px;  /* cap card width for a better appearance */
+         margin: 0 auto;
+    }
+    /* Give extra left spacing to the first card */
+    .articles-grid > .article-card:first-child {
+         margin-left: 20px;
+    }
+}
+
+/* Mobile Optimization */
+@media (max-width: 768px) {
+    .articles-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+    .article-card {
+        font-size: 14px;
+        max-width: 80vw;
+    }
+    .article-image {
+        width: 100%;
+        height: auto;
+    }
 }
